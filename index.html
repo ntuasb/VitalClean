@@ -246,7 +246,7 @@
   <footer class="bg-gray-700 text-white py-4">
    <div class="container mx-auto text-center">
     <p data-lang="footer">
-     © 2025 VitalClean Solutions. All rights reserved.
+     © 2025 VitalClean Solutions. All rights reserved.<br />CEO: Adolfo Salazar - Vanessa Salazar
     </p>
    </div>
   </footer>
@@ -276,7 +276,7 @@
        'contactEmail': 'Email',
        'contactMessage': 'Message',
        'sendMessage': 'Send Message',
-       'footer': '© 2025 VitalClean Solutions. All rights reserved.',
+       'footer': '© 2025 VitalClean Solutions. All rights reserved.<br />CEO: Adolfo Salazar - Vanessa Salazar',
      },
      es: {
        'companyName': 'VitalClean Solutions',
@@ -302,7 +302,7 @@
        'contactEmail': 'Correo Electrónico',
        'contactMessage': 'Mensaje',
        'sendMessage': 'Enviar Mensaje',
-       'footer': '© 2025 VitalClean Solutions. Todos los derechos reservados.',
+       'footer': '© 2025 VitalClean Solutions. Todos los derechos reservados.<br />CEO: Adolfo Salazar - Vanessa Salazar',
      },
    };
 
@@ -318,7 +318,8 @@
      document.querySelectorAll('[data-lang]').forEach(element => {
        const key = element.getAttribute('data-lang');
        if (translations[lang][key]) {
-         element.textContent = translations[lang][key];
+         // Usar innerHTML en lugar de textContent
+         element.innerHTML = translations[lang][key];
        }
      });
    }
