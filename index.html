@@ -71,6 +71,7 @@
      flex-direction: row;
      justify-content: space-between;
      align-items: center;
+     flex-wrap: nowrap; /* Ensure no wrapping on larger screens */
     }
 
     .header nav ul {
@@ -95,22 +96,26 @@
    /* Media query for mobile devices */
    @media (max-width: 768px) {
     .header .container {
-     flex-direction: column;
-     align-items: flex-start;
+     flex-direction: row; /* Keep items in a row */
+     align-items: flex-start; /* Align items to the start */
+     flex-wrap: wrap; /* Allow items to wrap to the next line */
     }
 
     .header nav {
-     margin-top: 10px;
-     margin-bottom: 10px;
+     margin-top: 0; /* Remove top margin */
+     margin-bottom: 0; /* Remove bottom margin */
+     width: 100%; /* Take full width to start on a new line */
     }
 
     .header nav ul {
-     flex-direction: column;
-     align-items: flex-start;
+     flex-direction: row; /* Keep navigation buttons horizontal */
+     flex-wrap: wrap; /* Allow navigation buttons to wrap */
+     justify-content: flex-start; /* Align buttons to the start */
     }
 
     .header nav ul li {
-     margin-bottom: 5px;
+     margin-bottom: 0; /* Remove bottom margin from list items */
+     margin-right: 10px; /* Add some horizontal spacing between buttons */
     }
 
     #language-toggle {
