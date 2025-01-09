@@ -1,0 +1,335 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   VitalClean Solutions
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   #home .container {
+    position: relative;
+    display: grid;
+   }
+
+   #home .container img {
+    width: 100%;
+    max-width: 1200px;
+    height: 540px; /* Reduced height to half of 1080px */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 0.5rem;
+    grid-column: 1;
+    grid-row: 1;
+   }
+
+   #home .container .absolute {
+    grid-column: 1;
+    grid-row: 1;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly less opaque overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+   }
+
+   #home .container .absolute .bg-gray-800 {
+    background-color: transparent; /* Remove the background from the text container */
+    padding: 0; /* Remove padding from the text container */
+   }
+
+   #home .container .absolute h2,
+   #home .container .absolute p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+   }
+  </style>
+ </head>
+ <body class="font-roboto bg-gray-50 text-gray-800">
+  <header class="bg-gray-700 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-3xl font-bold" data-lang="companyName">
+     VitalClean Solutions
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#home" data-lang="home">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#services" data-lang="services">
+        Services
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#reviews" data-lang="reviews">
+        Reviews
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#contact" data-lang="contact">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <button class="bg-gray-600 text-white px-4 py-2 rounded" id="language-toggle">
+     ES
+    </button>
+   </div>
+  </header>
+  <section class="relative py-12" id="home">
+   <div class="container mx-auto text-center relative">
+    <img alt="Health and Cleaning Professionals Team" class="mx-auto rounded-lg shadow-xl" height="1080" src="https://storage.googleapis.com/a1aa/image/cadd47e1-064d-4ee6-b40b-3fc1b8c44be7.jpeg" style="width: 100%; max-width: 1200px; height: auto;"/>
+    <div class="absolute inset-0 flex justify-center items-center">
+     <div class="bg-gray-800 bg-opacity-75 text-white rounded-lg" style="padding: 4%;">
+      <h2 class="text-4xl font-bold mb-4" data-lang="heroTitle">
+       We take care of your home and your health, with professionalism and dedication
+      </h2>
+      <p class="text-lg mb-8" data-lang="heroDescription">
+       At
+       <strong>
+        VitalClean Solutions
+       </strong>
+       , we specialize in offering professional home health care and cleaning services. Our team is made up of highly qualified and rigorously selected professionals to guarantee your peace of mind and satisfaction.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="bg-gray-100 py-12" id="services">
+   <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8" data-lang="ourServices">
+     Our Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Professional home cleaning service" class="w-full h-64 object-cover rounded-t-lg" height="1080" src="https://storage.googleapis.com/a1aa/image/f39f16f9-7882-461d-8c0a-f5e7cf458d89.jpeg" width="1920"/>
+      <h3 class="text-2xl font-bold mt-4" data-lang="cleaningService">
+       Home Cleaning
+      </h3>
+      <p class="mt-2" data-lang="cleaningDescription">
+       Impeccable cleaning services to keep your home spotless and organized.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Personalized home health care service" class="w-full h-64 object-cover rounded-t-lg" height="1080" src="https://storage.googleapis.com/a1aa/image/wHLYKw8jVK5eHqKDhmYrVlzJWCz8S5SWapMvrLOuC2yV3lBKA.jpg" width="1920"/>
+      <h3 class="text-2xl font-bold mt-4" data-lang="healthCareService">
+       Home Health Care
+      </h3>
+      <p class="mt-2" data-lang="healthCareDescription">
+       Personalized care services to ensure the well-being of your loved ones.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <img alt="Professional team providing cleaning and health care services" class="w-full h-64 object-cover rounded-t-lg" height="1080" src="https://storage.googleapis.com/a1aa/image/60a7f6a2-5f9b-4a70-976f-53f07747844e.jpeg" width="1920"/>
+      <h3 class="text-2xl font-bold mt-4" data-lang="professionalTeam">
+       Professional Team
+      </h3>
+      <p class="mt-2" data-lang="teamDescription">
+       Highly qualified professionals dedicated to providing top-notch services.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="bg-white py-12" id="reviews">
+   <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8" data-lang="clientReviews">
+     What Our Clients Say
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <p class="text-lg italic" data-lang="review1">
+       "VitalClean Solutions transformed my home! Their attention to detail is unmatched."
+      </p>
+      <div class="mt-4 flex justify-center">
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+      </div>
+      <p class="mt-2 font-bold">
+       - Jane Doe
+      </p>
+     </div>
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <p class="text-lg italic" data-lang="review2">
+       "Their home health care services are exceptional. I feel at ease knowing my parents are in good hands."
+      </p>
+      <div class="mt-4 flex justify-center">
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+      </div>
+      <p class="mt-2 font-bold">
+       - John Smith
+      </p>
+     </div>
+     <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <p class="text-lg italic" data-lang="review3">
+       "Professional, reliable, and thorough. I highly recommend VitalClean Solutions."
+      </p>
+      <div class="mt-4 flex justify-center">
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+       <i class="fas fa-star text-yellow-500">
+       </i>
+      </div>
+      <p class="mt-2 font-bold">
+       - Emily Johnson
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="bg-gray-100 py-12" id="contact">
+   <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-8" data-lang="contactUs">
+     Contact Us
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+     <div>
+      <img alt="Contact center with friendly staff ready to assist" class="w-full h-64 object-cover rounded-lg shadow-lg" height="1080" src="https://storage.googleapis.com/a1aa/image/FPlpdbSueeo1sU6yAuiSiND4Ud1CYkCNouZNUTFeucsQdXGoA.jpg" width="1920"/>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <form>
+       <div class="mb-4">
+        <label class="block text-left text-gray-700" for="name" data-lang="contactName">
+         Name
+        </label>
+        <input class="w-full p-2 border border-gray-300 rounded-lg" id="name" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-left text-gray-700" for="email" data-lang="contactEmail">
+         Email
+        </label>
+        <input class="w-full p-2 border border-gray-300 rounded-lg" id="email" type="email"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-left text-gray-700" for="message" data-lang="contactMessage">
+         Message
+        </label>
+        <textarea class="w-full p-2 border border-gray-300 rounded-lg" id="message"></textarea>
+       </div>
+       <button class="bg-gray-700 text-white px-4 py-2 rounded-lg" type="submit" data-lang="sendMessage">
+        Send Message
+       </button>
+      </form>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="bg-gray-700 text-white py-4">
+   <div class="container mx-auto text-center">
+    <p data-lang="footer">
+     © 2025 VitalClean Solutions. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <script>
+   const translations = {
+     en: {
+       'companyName': 'VitalClean Solutions',
+       'home': 'Home',
+       'services': 'Services',
+       'reviews': 'Reviews',
+       'contact': 'Contact',
+       'heroTitle': 'We take care of your home and your health, with professionalism and dedication',
+       'heroDescription': 'At VitalClean Solutions, we specialize in offering professional home health care and cleaning services. Our team is made up of highly qualified and rigorously selected professionals to guarantee your peace of mind and satisfaction.',
+       'ourServices': 'Our Services',
+       'cleaningService': 'Home Cleaning',
+       'cleaningDescription': 'Impeccable cleaning services to keep your home spotless and organized.',
+       'healthCareService': 'Home Health Care',
+       'healthCareDescription': 'Personalized care services to ensure the well-being of your loved ones.',
+       'professionalTeam': 'Professional Team',
+       'teamDescription': 'Highly qualified professionals dedicated to providing top-notch services.',
+       'clientReviews': 'What Our Clients Say',
+       'review1': '"VitalClean Solutions transformed my home! Their attention to detail is unmatched."',
+       'review2': '"Their home health care services are exceptional. I feel at ease knowing my parents are in good hands."',
+       'review3': '"Professional, reliable, and thorough. I highly recommend VitalClean Solutions."',
+       'contactUs': 'Contact Us',
+       'contactName': 'Name',
+       'contactEmail': 'Email',
+       'contactMessage': 'Message',
+       'sendMessage': 'Send Message',
+       'footer': '© 2025 VitalClean Solutions. All rights reserved.',
+     },
+     es: {
+       'companyName': 'VitalClean Solutions',
+       'home': 'Inicio',
+       'services': 'Servicios',
+       'reviews': 'Reseñas',
+       'contact': 'Contacto',
+       'heroTitle': 'Cuidamos de su hogar y su salud, con profesionalismo y dedicación',
+       'heroDescription': 'En VitalClean Solutions, nos especializamos en ofrecer servicios profesionales de cuidado de la salud en el hogar y limpieza. Nuestro equipo está compuesto por profesionales altamente cualificados y rigurosamente seleccionados para garantizar su tranquilidad y satisfacción.',
+       'ourServices': 'Nuestros Servicios',
+       'cleaningService': 'Limpieza del Hogar',
+       'cleaningDescription': 'Servicios de limpieza impecables para mantener su hogar impecable y organizado.',
+       'healthCareService': 'Cuidado de la Salud en el Hogar',
+       'healthCareDescription': 'Servicios de atención personalizados para asegurar el bienestar de sus seres queridos.',
+       'professionalTeam': 'Equipo Profesional',
+       'teamDescription': 'Profesionales altamente cualificados dedicados a proporcionar servicios de primer nivel.',
+       'clientReviews': 'Lo Que Dicen Nuestros Clientes',
+       'review1': '"¡VitalClean Solutions transformó mi hogar! Su atención al detalle es inigualable."',
+       'review2': '"Sus servicios de cuidado de la salud en el hogar son excepcionales. Me siento tranquilo sabiendo que mis padres están en buenas manos."',
+       'review3': '"Profesionales, confiables y minuciosos. Recomiendo ampliamente VitalClean Solutions."',
+       'contactUs': 'Contáctenos',
+       'contactName': 'Nombre',
+       'contactEmail': 'Correo Electrónico',
+       'contactMessage': 'Mensaje',
+       'sendMessage': 'Enviar Mensaje',
+       'footer': '© 2025 VitalClean Solutions. Todos los derechos reservados.',
+     },
+   };
+
+   const languageToggle = document.getElementById('language-toggle');
+   let currentLanguage = 'en'; // Initial language
+
+   function setLanguage(lang) {
+     currentLanguage = lang;
+     languageToggle.textContent = lang.toUpperCase();
+     document.documentElement.setAttribute('lang', lang);
+
+     // Update translatable text content
+     document.querySelectorAll('[data-lang]').forEach(element => {
+       const key = element.getAttribute('data-lang');
+       if (translations[lang][key]) {
+         element.textContent = translations[lang][key];
+       }
+     });
+   }
+
+   languageToggle.addEventListener('click', () => {
+     const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+     setLanguage(newLanguage);
+   });
+
+   // Set initial language
+   setLanguage(currentLanguage);
+  </script>
+ </body>
+</html>
