@@ -6,13 +6,13 @@
    VitalClean Solutions
   </title>
   <!-- Metadatos Open Graph para redes sociales -->
-  <meta property="og:title" content="VitalClean Solutions - Cuidado del Hogar y Salud con Profesionales"/>
-  <meta property="og:description" content="Servicios profesionales de cuidado de la salud en el hogar y limpieza. Contamos con un equipo altamente cualificado para su tranquilidad y satisfacción."/>
-  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/cadd47e1-064d-4ee6-b40b-3fc1b8c44be7.jpeg"/>
-  <meta property="og:url" content="https://vitalclean.pages.dev"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:locale" content="en_US"/> <!-- Puedes cambiarlo a es_ES si el contenido principal es en ESPAÑOL -->
-  <meta property="og:site_name" content="VitalClean Solutions"/>
+  <meta content="VitalClean Solutions - Cuidado del Hogar y Salud con Profesionales" property="og:title"/>
+  <meta content="Servicios profesionales de cuidado de la salud en el hogar y limpieza. Contamos con un equipo altamente cualificado para su tranquilidad y satisfacción." property="og:description"/>
+  <meta content="https://storage.googleapis.com/a1aa/image/cadd47e1-064d-4ee6-b40b-3fc1b8c44be7.jpeg" property="og:image"/>
+  <meta content="https://www.vitalcleansolutions.com" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="es_ES" property="og:locale"/>
+  <meta content="VitalClean Solutions" property="og:site_name"/>
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -26,8 +26,8 @@
    #home .container img {
     width: 100%;
     max-width: 1200px;
-    height: 540px; /* Reduced height to half of 1080px */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+    height: 540px;
+    object-fit: cover;
     border-radius: 0.5rem;
     grid-column: 1;
     grid-row: 1;
@@ -37,49 +37,146 @@
     grid-column: 1;
     grid-row: 1;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly less opaque overlay */
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: inherit;
+    padding: 1rem;
+    text-align: center;
    }
 
    #home .container .absolute .bg-gray-800 {
-    background-color: transparent; /* Remove the background from the text container */
-    padding: 0; /* Remove padding from the text container */
+    background-color: transparent;
+    padding: 0;
    }
 
-   #home .container .absolute h2,
+   #home .container .absolute h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0.5rem;
+   }
+
    #home .container .absolute p {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    /* Apply line clamping to the paragraph */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines of text */
+    -webkit-box-orient: vertical;
+   }
+
+   /* Styles for larger screens (non-mobile) */
+   @media (min-width: 769px) {
+    .header .container {
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+    }
+
+    .header nav ul {
+     flex-direction: row;
+     space-x-4;
+    }
+
+    #language-toggle {
+     margin-left: 1rem;
+    }
+
+    #home .container .absolute h2 {
+     font-size: 2.5rem; /* Slightly larger font for bigger screens */
+    }
+
+    #home .container .absolute p {
+     font-size: 1.1rem; /* Slightly larger font for bigger screens */
+     -webkit-line-clamp: 4; /* Show more lines on larger screens */
+    }
+   }
+
+   /* Media query for mobile devices */
+   @media (max-width: 768px) {
+    .header .container {
+     flex-direction: column;
+     align-items: flex-start;
+    }
+
+    .header nav {
+     margin-top: 10px;
+     margin-bottom: 10px;
+    }
+
+    .header nav ul {
+     flex-direction: column;
+     align-items: flex-start;
+    }
+
+    .header nav ul li {
+     margin-bottom: 5px;
+    }
+
+    #language-toggle {
+     margin-left: 0;
+     margin-top: 10px;
+    }
+
+    #home .container .absolute h2 {
+     font-size: 1.6rem; /* Slightly smaller font for mobile */
+    }
+
+    #home .container .absolute p {
+     font-size: 0.85rem; /* Slightly smaller font for mobile */
+     -webkit-line-clamp: 3; /* Keep 3 lines on mobile */
+    }
+   }
+
+   /* Existing Styles (Keep them) */
+   .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   .header nav ul {
+    display: flex;
+    space-x-4;
+   }
+
+   .header nav ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+   }
+
+   .header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
    }
   </style>
  </head>
  <body class="font-roboto bg-gray-50 text-gray-800">
-  <header class="bg-gray-700 text-white p-4">
-   <div class="container mx-auto flex justify-between items-center">
+  <header class="bg-gray-700 text-white p-4 header">
+   <div class="container mx-auto">
     <h1 class="text-3xl font-bold" data-lang="companyName">
      VitalClean Solutions
     </h1>
     <nav>
-     <ul class="flex space-x-4">
+     <ul class="">
       <li>
-       <a class="hover:underline" href="#home" data-lang="home">
+       <a class="hover:underline" data-lang="home" href="#home">
         Home
        </a>
       </li>
       <li>
-       <a class="hover:underline" href="#services" data-lang="services">
+       <a class="hover:underline" data-lang="services" href="#services">
         Services
        </a>
       </li>
       <li>
-       <a class="hover:underline" href="#reviews" data-lang="reviews">
+       <a class="hover:underline" data-lang="reviews" href="#reviews">
         Reviews
        </a>
       </li>
       <li>
-       <a class="hover:underline" href="#contact" data-lang="contact">
+       <a class="hover:underline" data-lang="contact" href="#contact">
         Contact
        </a>
       </li>
@@ -226,24 +323,25 @@
      <div class="bg-white p-6 rounded-lg shadow-lg">
       <form>
        <div class="mb-4">
-        <label class="block text-left text-gray-700" for="name" data-lang="contactName">
+        <label class="block text-left text-gray-700" data-lang="contactName" for="name">
          Name
         </label>
         <input class="w-full p-2 border border-gray-300 rounded-lg" id="name" type="text"/>
        </div>
        <div class="mb-4">
-        <label class="block text-left text-gray-700" for="email" data-lang="contactEmail">
+        <label class="block text-left text-gray-700" data-lang="contactEmail" for="email">
          Email
         </label>
         <input class="w-full p-2 border border-gray-300 rounded-lg" id="email" type="email"/>
        </div>
        <div class="mb-4">
-        <label class="block text-left text-gray-700" for="message" data-lang="contactMessage">
+        <label class="block text-left text-gray-700" data-lang="contactMessage" for="message">
          Message
         </label>
-        <textarea class="w-full p-2 border border-gray-300 rounded-lg" id="message"></textarea>
+        <textarea class="w-full p-2 border border-gray-300 rounded-lg" id="message">
+         </textarea>
        </div>
-       <button class="bg-gray-700 text-white px-4 py-2 rounded-lg" type="submit" data-lang="sendMessage">
+       <button class="bg-gray-700 text-white px-4 py-2 rounded-lg" data-lang="sendMessage" type="submit">
         Send Message
        </button>
       </form>
@@ -254,87 +352,88 @@
   <footer class="bg-gray-700 text-white py-4">
    <div class="container mx-auto text-center">
     <p data-lang="footer">
-     © 2025 VitalClean Solutions. All rights reserved.<br />CEO: Adolfo Salazar - Vanessa Salazar
+     © 2025 VitalClean Solutions. All rights reserved.<br/>
+     CEO: Adolfo Salazar - Vanessa Salazar
     </p>
    </div>
   </footer>
   <script>
    const translations = {
-     en: {
-       'companyName': 'VitalClean Solutions',
-       'home': 'Home',
-       'services': 'Services',
-       'reviews': 'Reviews',
-       'contact': 'Contact',
-       'heroTitle': 'We take care of your home and your health, with professionalism and dedication',
-       'heroDescription': 'At VitalClean Solutions, we specialize in offering professional home health care and cleaning services. Our team is made up of highly qualified and rigorously selected professionals to guarantee your peace of mind and satisfaction.',
-       'ourServices': 'Our Services',
-       'cleaningService': 'Home Cleaning',
-       'cleaningDescription': 'Impeccable cleaning services to keep your home spotless and organized.',
-       'healthCareService': 'Home Health Care',
-       'healthCareDescription': 'Personalized care services to ensure the well-being of your loved ones.',
-       'professionalTeam': 'Professional Team',
-       'teamDescription': 'Highly qualified professionals dedicated to providing top-notch services.',
-       'clientReviews': 'What Our Clients Say',
-       'review1': '"VitalClean Solutions transformed my home! Their attention to detail is unmatched."',
-       'review2': '"Their home health care services are exceptional. I feel at ease knowing my parents are in good hands."',
-       'review3': '"Professional, reliable, and thorough. I highly recommend VitalClean Solutions."',
-       'contactUs': 'Contact Us',
-       'contactName': 'Name',
-       'contactEmail': 'Email',
-       'contactMessage': 'Message',
-       'sendMessage': 'Send Message',
-       'footer': '© 2025 VitalClean Solutions. All rights reserved.<br />CEO: Adolfo Salazar - Vanessa Salazar',
-     },
-     es: {
-       'companyName': 'VitalClean Solutions',
-       'home': 'Inicio',
-       'services': 'Servicios',
-       'reviews': 'Reseñas',
-       'contact': 'Contacto',
-       'heroTitle': 'Cuidamos de su hogar y su salud, con profesionalismo y dedicación',
-       'heroDescription': 'En VitalClean Solutions, nos especializamos en ofrecer servicios profesionales de cuidado de la salud en el hogar y limpieza. Nuestro equipo está compuesto por profesionales altamente cualificados y rigurosamente seleccionados para garantizar su tranquilidad y satisfacción.',
-       'ourServices': 'Nuestros Servicios',
-       'cleaningService': 'Limpieza del Hogar',
-       'cleaningDescription': 'Servicios de limpieza impecables para mantener su hogar impecable y organizado.',
-       'healthCareService': 'Cuidado de la Salud en el Hogar',
-       'healthCareDescription': 'Servicios de atención personalizados para asegurar el bienestar de sus seres queridos.',
-       'professionalTeam': 'Equipo Profesional',
-       'teamDescription': 'Profesionales altamente cualificados dedicados a proporcionar servicios de primer nivel.',
-       'clientReviews': 'Lo Que Dicen Nuestros Clientes',
-       'review1': '"¡VitalClean Solutions transformó mi hogar! Su atención al detalle es inigualable."',
-       'review2': '"Sus servicios de cuidado de la salud en el hogar son excepcionales. Me siento tranquilo sabiendo que mis padres están en buenas manos."',
-       'review3': '"Profesionales, confiables y minuciosos. Recomiendo ampliamente VitalClean Solutions."',
-       'contactUs': 'Contáctenos',
-       'contactName': 'Nombre',
-       'contactEmail': 'Correo Electrónico',
-       'contactMessage': 'Mensaje',
-       'sendMessage': 'Enviar Mensaje',
-       'footer': '© 2025 VitalClean Solutions. Todos los derechos reservados.<br />CEO: Adolfo Salazar - Vanessa Salazar',
-     },
+    en: {
+     'companyName': 'VitalClean Solutions',
+     'home': 'Home',
+     'services': 'Services',
+     'reviews': 'Reviews',
+     'contact': 'Contact',
+     'heroTitle': 'We take care of your home and your health, with professionalism and dedication',
+     'heroDescription': 'At VitalClean Solutions, we specialize in offering professional home health care and cleaning services. Our team is made up of highly qualified and rigorously selected professionals to guarantee your peace of mind and satisfaction.',
+     'ourServices': 'Our Services',
+     'cleaningService': 'Home Cleaning',
+     'cleaningDescription': 'Impeccable cleaning services to keep your home spotless and organized.',
+     'healthCareService': 'Home Health Care',
+     'healthCareDescription': 'Personalized care services to ensure the well-being of your loved ones.',
+     'professionalTeam': 'Professional Team',
+     'teamDescription': 'Highly qualified professionals dedicated to providing top-notch services.',
+     'clientReviews': 'What Our Clients Say',
+     'review1': '"VitalClean Solutions transformed my home! Their attention to detail is unmatched."',
+     'review2': '"Their home health care services are exceptional. I feel at ease knowing my parents are in good hands."',
+     'review3': '"Professional, reliable, and thorough. I highly recommend VitalClean Solutions."',
+     'contactUs': 'Contact Us',
+     'contactName': 'Name',
+     'contactEmail': 'Email',
+     'contactMessage': 'Message',
+     'sendMessage': 'Send Message',
+     'footer': '© 2025 VitalClean Solutions. All rights reserved.<br/>CEO: Adolfo Salazar - Vanessa Salazar',
+    },
+    es: {
+     'companyName': 'VitalClean Solutions',
+     'home': 'Inicio',
+     'services': 'Servicios',
+     'reviews': 'Reseñas',
+     'contact': 'Contacto',
+     'heroTitle': 'Cuidamos de su hogar y su salud, con profesionalismo y dedicación',
+     'heroDescription': 'En VitalClean Solutions, nos especializamos en ofrecer servicios profesionales de cuidado de la salud en el hogar y limpieza. Nuestro equipo está compuesto por profesionales altamente cualificados y rigurosamente seleccionados para garantizar su tranquilidad y satisfacción.',
+     'ourServices': 'Nuestros Servicios',
+     'cleaningService': 'Limpieza del Hogar',
+     'cleaningDescription': 'Servicios de limpieza impecables para mantener su hogar impecable y organizado.',
+     'healthCareService': 'Cuidado de la Salud en el Hogar',
+     'healthCareDescription': 'Servicios de atención personalizados para asegurar el bienestar de sus seres queridos.',
+     'professionalTeam': 'Equipo Profesional',
+     'teamDescription': 'Profesionales altamente cualificados dedicados a proporcionar servicios de primer nivel.',
+     'clientReviews': 'Lo Que Dicen Nuestros Clientes',
+     'review1': '"¡VitalClean Solutions transformó mi hogar! Su atención al detalle es inigualable."',
+     'review2': '"Sus servicios de cuidado de la salud en el hogar son excepcionales. Me siento tranquilo sabiendo que mis padres están en buenas manos."',
+     'review3': '"Profesionales, confiables y minuciosos. Recomiendo ampliamente VitalClean Solutions."',
+     'contactUs': 'Contáctenos',
+     'contactName': 'Nombre',
+     'contactEmail': 'Correo Electrónico',
+     'contactMessage': 'Mensaje',
+     'sendMessage': 'Enviar Mensaje',
+     'footer': '© 2025 VitalClean Solutions. Todos los derechos reservados.<br/>CEO: Adolfo Salazar - Vanessa Salazar',
+    },
    };
 
    const languageToggle = document.getElementById('language-toggle');
    let currentLanguage = 'en'; // Initial language
 
    function setLanguage(lang) {
-     currentLanguage = lang;
-     languageToggle.textContent = lang.toUpperCase();
-     document.documentElement.setAttribute('lang', lang);
+    currentLanguage = lang;
+    languageToggle.textContent = lang.toUpperCase();
+    document.documentElement.setAttribute('lang', lang);
 
-     // Update translatable text content
-     document.querySelectorAll('[data-lang]').forEach(element => {
-       const key = element.getAttribute('data-lang');
-       if (translations[lang][key]) {
-         // Usar innerHTML en lugar de textContent
-         element.innerHTML = translations[lang][key];
-       }
-     });
+    // Update translatable text content
+    document.querySelectorAll('[data-lang]').forEach(element => {
+     const key = element.getAttribute('data-lang');
+     if (translations[lang][key]) {
+      // Usar innerHTML en lugar de textContent
+      element.innerHTML = translations[lang][key];
+     }
+    });
    }
 
    languageToggle.addEventListener('click', () => {
-     const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
-     setLanguage(newLanguage);
+    const newLanguage = currentLanguage === 'es' ? 'en' : 'es';
+    setLanguage(newLanguage);
    });
 
    // Set initial language
